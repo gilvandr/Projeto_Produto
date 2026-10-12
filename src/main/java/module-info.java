@@ -5,4 +5,5 @@ module org.p1produto {
 
     opens org.p1produto to javafx.fxml;
     exports org.p1produto;
+    exports org.p1produto.controller to javafx.fxml;
 }
