@@ -1,13 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<VBox maxHeight="-Infinity"
-      maxWidth="-Infinity"
-      minHeight="-Infinity"
-      minWidth="-Infinity"
-      prefHeight="400.0"
-      prefWidth="600.0"
-      fx:controller="org.p1produto.controller.MainController"
-      xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" />
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="831.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.p1produto.controller.ProdutoController">
+    <children>
+        <TabPane prefHeight="831.0" prefWidth="625.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Gerenciamento de Produtos">
+                    <content>
+                        <SplitPane dividerPositions="0.304257528556594" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="963.0" prefWidth="625.0">
+                            <items>
+                                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="625.0">
+                                    <children>
+                                        <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="15.0" layoutY="14.0" prefHeight="238.0" prefWidth="595.0" AnchorPane.leftAnchor="15.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="105.0" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="490.0" minWidth="10.0" prefWidth="490.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Código" textAlignment="CENTER" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Nome" GridPane.rowIndex="1" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Descrição" GridPane.rowIndex="2" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Data Fabricação" GridPane.rowIndex="3" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Data Validade" GridPane.rowIndex="4" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Preço Compra" GridPane.rowIndex="5" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Preço Venda" GridPane.rowIndex="6" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Estoque" GridPane.rowIndex="7" />
+                                                <Label nodeOrientation="LEFT_TO_RIGHT" text="Categoria" GridPane.rowIndex="8" />
+                                                <TextField fx:id="txtCodigo" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" />
+                                                <TextField fx:id="txtNome" layoutX="115.0" layoutY="11.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="txtDescricao" layoutX="10.0" layoutY="11.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <DatePicker fx:id="dpFabricacao" layoutX="10.0" layoutY="11.0" prefHeight="25.0" prefWidth="493.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <DatePicker fx:id="dpValidade" layoutX="115.0" layoutY="11.0" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField fx:id="txtPrecoCompra" layoutX="10.0" layoutY="11.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <TextField fx:id="txtPrecoVenda" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <TextField fx:id="txtEstoque" layoutX="10.0" layoutY="11.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <ComboBox fx:id="cmbCategoria" prefHeight="25.0" prefWidth="491.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                            </children>
+                                        </GridPane>
+                                        <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="258.0" prefHeight="25.0" prefWidth="600.0" spacing="8.0">
+                                            <children>
+                                                <Button onAction="#handleCadastrar" text="Cadastrar" />
+                                                <Button onAction="#handleLimpar" text="Limpar" />
+                                                <Button onAction="#handleSalvar" text="Salvar" />
+                                                <Button onAction="#handleExcluir" text="Excluir" />
+                                                <TextField fx:id="txtBuscaCodigo" prefHeight="25.0" prefWidth="120.0" promptText="Código">
+                                                    <font>
+                                                        <Font size="11.0" />
+                                                    </font>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" onAction="#handleBuscar" text="Buscar" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="327.0" prefWidth="625.0">
+                                    <children>
+                                        <TableView fx:id="tblProdutos" layoutX="14.0" layoutY="14.0" prefHeight="464.0" prefWidth="599.0">
+                                            <columns>
+                                                <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Código" />
+                                                <TableColumn fx:id="colNome" prefWidth="75.0" text="Nome" />
+                                                <TableColumn fx:id="colPrecoVenda" prefWidth="98.0" text="Preço de Venda" />
+                                                <TableColumn fx:id="colEstoque" prefWidth="52.0" text="Estoque" />
+                                                <TableColumn fx:id="colValidade" prefWidth="98.0" text="Data de Validade" />
+                                                <TableColumn fx:id="colCategoria" prefWidth="52.0" text="Categoria" />
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </content>
+                </Tab>
+                <Tab text="Relatórios e Consultas">
+                    <content>
+                        <VBox prefHeight="777.0" prefWidth="625.0" spacing="10.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="625.0" spacing="10.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Relatórios:" wrappingWidth="86.970703125">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </Text>
+                                        <Button onAction="#handleRelatorioVencimento" text="Vencimento Próximo" />
+                                        <Button onAction="#handleRelatorioEstoqueBaixo" text="Estoque Baixo" />
+                                        <Button onAction="#handleRelatorioMargemMedia" text="Margem Média" />
+                                        <Button onAction="#handleRelatorioAgruparSetor" text="Agrupar por Setor" />
+                                    </children>
+                                </HBox>
+                                <StackPane prefHeight="457.0" prefWidth="625.0">
+                                    <children>
+                                        <TextArea fx:id="txtAreaRelatorio" prefHeight="200.0" prefWidth="625.0" />
+                                    </children>
+                                </StackPane>
+                            </children>
+                            <padding>
+                                <Insets top="8.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

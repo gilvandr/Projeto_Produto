@@ -3,7 +3,9 @@ module org.p1produto {
     requires javafx.fxml;
 
 
-    opens org.p1produto to javafx.fxml;
+    opens org.p1produto.controller to javafx.fxml;
     exports org.p1produto;
     exports org.p1produto.controller to javafx.fxml;
+
+
 }
